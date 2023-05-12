@@ -1,0 +1,44 @@
+.getstarted-button{
+    position: absolute;
+    width: 230px;
+    height: 55px;
+    top: 340px;
+    right: 280px;
+    border: 1px solid #455A64;
+    cursor: pointer;
+    background: #455A64;
+    border-radius: 6px;
+    font-family: "poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.getstarted-button:hover{
+    background: #FFFFFF;
+    color: #455A64;
+    font-weight: 500;
+    transition: 0.4s;
+}
+.homepage-image{
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    left: 90px;
+    top: 100px;
+}
+
+.homepage-content{
+    position: absolute;
+    left: 770px;
+    top: 150px;
+    font-family: 'poppins';
+    font-style: bold;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 15px; 
+    text-align: left;
+    color: #263238;
+}

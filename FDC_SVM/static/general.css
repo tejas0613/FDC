@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    font-family: 'poppins';
+    overflow-x: hidden;
+    padding-bottom: 200px;
+    background: linear-gradient(180deg,#ADD4D7 35%,#F0FBFC 100%);
+    height: 250px;
+    color: #263238;
+    background-repeat: no-repeat; 
+}

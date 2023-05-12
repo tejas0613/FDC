@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #ADD4D7;
+    color: #455A64;
+    padding-top: 10px;
+    padding-right: 400px;
+    padding-left : 400px;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+.home p::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #455A64;
+    transition: width .3s;
+}
+.home p:hover::after{
+    width: 100%;
+}
+.analysis{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+.analysis p::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #455A64;
+    transition: width .3s;
+}
+.analysis p:hover::after{
+    width: 100%;
+}
+.resources{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'poppins';
+    font-weight: 500;
+}
+.resources p::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #455A64;
+    transition: width .3s;
+}
+.resources p:hover::after{
+    width: 100%;
+}
+

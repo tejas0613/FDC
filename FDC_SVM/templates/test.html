@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDC_SVM</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="ctgfile">Upload your file here:</label><br><br>
+        <input type="file" name="file"><br><br>
+        <label for="index">SegFile number</label>
+        <input type="text" name="index" id="index">
+        <input type="submit" value="Upload File"><br><br>
+        array: {{array}}
+    </form>
+    <hr><br>
+    <form action="/model" method="POST">
+        <label for="lbe">LBE</label>
+        <input type="text" name="lbe" id="lbe"><br>
+        <label for="lb">LB</label>
+        <input type="text" name="lb" id="lb"><br>
+        <label for="ac">AC</label>
+        <input type="text" name="ac" id="ac"><br>
+        <label for="fm">FM</label>
+        <input type="text" name="fm" id="fm"><br>
+        <label for="uc">UC</label>
+        <input type="text" name="uc" id="uc"><br>
+        <label for="dl">DL</label>
+        <input type="text" name="dl" id="dl"><br>
+        <label for="ds">DS</label>
+        <input type="text" name="ds" id="ds"><br>
+        <label for="dp">DP</label>
+        <input type="text" name="dp" id="dp"><br>
+        <label for="dr">DR</label>
+        <input type="text" name="dr" id="dr"><br><br>
+        <label for="output" id="output">Class: {{result}}</label><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

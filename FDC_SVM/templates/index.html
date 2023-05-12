@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fetal Distress Classifier</title>
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='general.css') }}"> -->
+        <link rel="stylesheet" href="../static/navbar.css">
+        <link rel="stylesheet" href="../static/index.css">
+        <link rel="stylesheet" href="../static/general.css">
+    </head>
+    <body>
+        <div class ="navbar">
+            <div class="home" onclick="window.location.href='/'">
+                <p onclick="window.location.href='/'"><b>Home</b></p>  
+            </div>
+            <div class="analysis" onclick="window.location.href='analysis'">
+                <p onclick="window.location.href='analysis'"><b>Analysis</b></p>
+            </div>
+            <div class="resources" onclick="window.location.href='resources'">
+                <p onclick="window.location.href='resources'"><b>Resources</b></p>
+            </div>
+        </div>
+            <div class="hero-body">
+        
+                <img class="homepage-image" src="{{ url_for('static', filename='main img.png') }}" alt="homepage image">
+                <button class="getstarted-button" onclick="window.location.href='analysis'">GET STARTED</button> 
+                <span class="homepage-content"><p>Prioritizing Baby's Health:</p>
+                    <p>Early Detection and</p>
+                    <p>Intervention for Fetal Distress</p>
+                    <p>Simplified.</p>
+                </span>
+            </div>
+    </body>
+</html>

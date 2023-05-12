@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='analysis.css') }}">
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/analysis.css">
+</head>
+<body>
+    <div class ="navbar">
+        <div class="home" onclick="window.location.href='/'">
+            <p onclick="window.location.href='/'"><b>Home</b></p>  
+        </div>
+        <div class="analysis" onclick="window.location.href='analysis'">
+            <p onclick="window.location.href='analysis'"><b>Analysis</b></p>
+        </div>
+        <div class="resources" onclick="window.location.href='resources'">
+            <p onclick="window.location.href='resources'"><b>Resources</b></p>
+        </div>
+    </div>
+    <div class="file-upload">
+        <form class="file-upload-content" action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="ctgfile" style="margin-right: 15px;">Upload the file: </label>
+            <input type="file" name="file" value="Upload">
+            <label for="index" style="margin-right: 15px;">SegFile number:</label>
+            <input type="text" name="index" id="index">
+            <input type="submit" value="Submit"><br><br>
+        </form>
+    </div>
+    <!-- {{ffarr}} -->
+    <div class="container">
+        <div class="left-card">
+            <p>CTG OUTPUT: </p>
+            <form class="features-input"action="/model" method="POST" enctype="multipart/form-data">
+                {% for feature in ffarr %}
+                <label for="lbe">LBE:</label>
+                <input type="text" name="lbe" id="lbe" value="{{feature[0]}}">
+                <label for="lb">LB:</label>
+                <input type="text" name="lb" id="lb" value="{{feature[1]}}">   
+                <label for="ac">AC:</label>
+                <input type="text" name="ac" id="ac" value="{{feature[2]}}"><br><br><br>
+                <label for="fm">FM:</label>
+                <input type="text" name="fm" id="fm" value="{{feature[3]}}">
+                <label for="uc">UC:</label>
+                <input type="text" name="uc" id="uc" value="{{feature[4]}}">
+                <label for="dl">DL:</label>
+                <input type="text" name="dl" id="dl" value="{{feature[5]}}"><br><br><br>
+                <label for="ds">DS:</label>
+                <input type="text" name="ds" id="ds" value="{{feature[6]}}">
+                <label for="dp">DP:</label>
+                <input type="text" name="dp" id="dp" value="{{feature[7]}}">
+                <label for="dr">DR:</label>
+                <input type="text" name="dr" id="dr" value="{{feature[8]}}"><br><br><br>
+                {% endfor %}
+                <!-- <input type="submit" value="PREDICT"> -->
+                <label for="output" id="output"><h2>CLASS: <span class="result-text">{{result}}</span></h2></label><br><br>
+            </form>
+        </div>
+        <div class="right-card">
+            <p>Output Graph</p>
+            <!-- <img src="{{ url_for('static', filename='plot.png') }}"> -->
+            <img src="data:image/png;base64,{{ plot }}">
+        </div>
+    </div>
+    <script>
+        result_text = document.querySelector(".result-text");
+        if(result_text.innerHTML == "Distressed"){
+            result_text.style.color = "red";
+        }
+        else if(result_text.innerHTML == "Normal"){
+            result_text.style.color = "lightgreen";
+        }
+    </script>
+
+</body>
+</html>

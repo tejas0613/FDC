@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='resources.css') }}">
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="stylesheet" href="../static/resources.css">
+</head>
+<body>
+    <div class ="navbar">
+        <div class="home" onclick="window.location.href='/'">
+            <p onclick="window.location.href='/'"><b>Home</b></p>  
+        </div>
+        <div class="analysis" onclick="window.location.href='analysis'">
+            <p onclick="window.location.href='analysis'"><b>Analysis</b></p>
+        </div>
+        <div class="resources" onclick="window.location.href='resources'">
+            <p onclick="window.location.href='resources'"><b>Resources</b></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="left-card">
+            <br>
+            <br>
+
+            <a href='https://drive.google.com/file/d/1i3UDN3EMUpQ_JVQ7ZRWNEaV4yewSl9lw/view?usp=share_link' target="_blank">
+                <button class="button">
+                    Research Paper
+                </button>
+            </a>
+            
+            <br>
+            <a href='https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/' target="_blank">
+                <button class="button">
+                    Methodolgy
+                </button>
+            </a>
+            
+        </div>
+        <div class="right-card">
+            <div class="right-card-content">
+                <h2>Team Details</h2>
+                <p>S Sharan Srinivasan : 20191CSE0514</p>
+                <p>Tejas Venugopal :  20191CSE0631</p>
+                <p>Phebe Evangeline : 20191CSE0767</p>
+                <p>Sri Sampada V Pachhapur : 20191CSE0784</p>
+                <p>Kadiri Niketha : 20191CSE0792</p>
+            </div>      
+        </div>
+    </div>   
+</body>
+</html>
